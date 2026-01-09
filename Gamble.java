@@ -5,8 +5,6 @@ public class Gamble
 {
     private int coins = 0;
     Scanner userInput = new Scanner(System.in);
-    private String[] slot = {"", "", ""};
-    private String[] slotValue = {"🍒", "🍋", "🍇"};
 
     
     public void setCoin(int c) {
@@ -41,16 +39,13 @@ public class Gamble
 
 
 
+        }
 
-                System.out.print("\r[" + slot[0][0] + " ][" + slot[1][0] + " ][" + slot[2][0] + " ]         ");
-	        }
-	    }
 	    else if (coins < 2)
 	    {
 	        System.out.println("Sorry! You are too POOR! Come back when you're a little... mmmmmmmm... RICHER!");
 	    }
 	}
 	
-	
-	
 }
+	
