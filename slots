@@ -1,0 +1,15 @@
+def slots():
+    boolean imp = True
+    slot = input("      ")
+    while imp == True:
+        i = 0
+        add = 1
+    
+        if slot = "stop":
+            add += 1
+            i = 1 + add
+    
+        for i in range(3):
+            int slotRandom = random.randint(1, 3)
+        
+            slot[i] = slotValue[slotRandom]

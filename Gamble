@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+
+public class Gamble
+{
+    private int coins = 0;
+    Scanner userInput = new Scanner(System.in);
+    private String[] slot = {"", "", ""};
+    private String[] slotValue = {"🍒", "🍋", "🍇"};
+
+    
+    public void setCoin(int c) {
+        
+        coins = c;
+        System.out.println("You have " + coins + " coins");
+        
+    }
+    
+    public void options() {
+        
+        
+        
+        System.out.println("Slot Machines - Costs 5 coins, Win up to 250! (Type slots to gamble)");
+        System.out.println("Placeholder");
+        System.out.println("Placeholder");
+        System.out.println("You have " + coins + " coins");
+        
+        System.out.println("Select an option\n");
+        String choice = userInput.nextLine();  
+        
+    }
+    
+    
+	public void slots(){
+	    if (coins >= 2)
+	    {
+	        coins -= 2;
+
+
+
+
+
+
+
+                System.out.print("\r[" + slot[0][0] + " ][" + slot[1][0] + " ][" + slot[2][0] + " ]         ");
+	        }
+	    }
+	    else if (coins < 2)
+	    {
+	        System.out.println("Sorry! You are too POOR! Come back when you're a little... mmmmmmmm... RICHER!");
+	    }
+	}
+	
+	
+	
+}
