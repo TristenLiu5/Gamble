@@ -7,9 +7,10 @@ public class Gamble
     Scanner userInput = new Scanner(System.in);
 
     
-    public void setCoin(int c) {
+    public int addCoin(int c) {
         
-        coins = c;
+        coins += c;
+        return coins;
         
     }
     
@@ -19,7 +20,7 @@ public class Gamble
         
         while (failsafe == false)
         {
-            System.out.println("Slot Machines - Costs 5 coins, Win up to 250 coins!");
+            System.out.println("Slot Machines - Costs 2 coins, Win up to 250 coins!");
             System.out.println("Placeholder");
             System.out.println("Placeholder");
             System.out.println("You have " + coins + " coins.");

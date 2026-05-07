@@ -1,7 +1,9 @@
 public class Slots
 {
     private String[] slots = {"", "", ""};
-    private String[] slotValue = {"🍒", "🍋", "🍇"};
+    private String[] slotValue = {"🍒", "🍇", "🍋"};
+    Gamble Gambling = new Gamble();
+    //Gamble Gambling = Main.Gambling();
     
     public void Play()
     {
@@ -10,7 +12,7 @@ public class Slots
         while (stop < 3)
         {
 
-            if (auto >= 20)
+            if (auto >= 10)
             {
                 stop++;
                 auto = 0;
@@ -35,13 +37,30 @@ public class Slots
             auto++;
         }
 
-
-        if (slots[0].equals(slots[1]) && slots[1].equals(slots[2]));
-        {
-            System.out.print("\n"); //\u001B[42m
-            System.out.println("You got meony!!");
+        System.out.print("\n"); //\u001B[42m
+        if (slots[0].equals("🍒") && slots[0].equals(slots[1]) && slots[1].equals(slots[2]))
+        { 
+            System.out.println("You won " + Gambling.addCoin(5) + " coins!");
         }
-        
+        else if (slots[0].equals("🍇") && slots[0].equals(slots[1]) && slots[1].equals(slots[2]))
+        {
+            System.out.println("You won " + Gambling.addCoin(15) + " coins!");
+        }
+        else if (slots[0].equals("🍋") && slots[0].equals(slots[1]) && slots[1].equals(slots[2]))
+        {
+            System.out.println("You won " + Gambling.addCoin(25) + " coins!");
+        }
+
+        try{
+
+        Thread.sleep(200);
+        }
+        catch (Exception e)
+        {
+            System.out.println("An error has occured, please try again");
+
+        }
+        Gambling.options();
     }
     
 
