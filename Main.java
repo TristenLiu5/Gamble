@@ -1,3 +1,4 @@
+
 public class Main
 {
 	public static void main(String[] args) {
@@ -5,6 +6,6 @@ public class Main
 		Gamble Gambling = new Gamble();
 		
 		Gambling.setCoin(10);
-		Gambling.slots();
+		Gambling.options();
 	}
 }
