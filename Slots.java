@@ -2,8 +2,7 @@ public class Slots
 {
     private String[] slots = {"", "", ""};
     private String[] slotValue = {"🍒", "🍇", "🍋"};
-    Gamble Gambling = new Gamble();
-    //Gamble Gambling = Main.Gambling();
+    Coin Coins = new Coin();
     
     public void Play()
     {
@@ -60,6 +59,7 @@ public class Slots
             System.out.println("An error has occured, please try again");
 
         }
+        //Gambling.addCoin();
         Gambling.options();
     }
     

@@ -7,12 +7,7 @@ public class Gamble
     Scanner userInput = new Scanner(System.in);
 
     
-    public int addCoin(int c) {
-        
-        coins += c;
-        return coins;
-        
-    }
+
     
     public void options() 
     {
