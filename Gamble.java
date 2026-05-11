@@ -23,18 +23,18 @@ public class Gamble
         while (failsafe == false)
         {
             System.out.println("Slot Machines - Costs 2 coins, Win up to 250 coins!");
-            System.out.println("Placeholder");
-            System.out.println("Placeholder");
+            // System.out.println("Placeholder");
+            // System.out.println("Placeholder");
             System.out.println("You have " + coins + " coins.");
             
-            System.out.println("Select an option.");
+            // System.out.println("Select an option.");
             String choice = userInput.nextLine();  
             
             if (choice.toLowerCase().contains("sl") || choice.toLowerCase().contains("ot") || choice.equals("1"))
             {
                 if (coins >= 2)
                 {
-                    coins -= 2;
+                    Main.coins -= 2;
                     failsafe = true;
                     Slots slotGame = new Slots();
                     slotGame.Play();
