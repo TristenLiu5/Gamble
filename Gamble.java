@@ -6,6 +6,13 @@ public class Gamble
     private int coins = 0;
     Scanner userInput = new Scanner(System.in);
 
+    public int addCoin(int c) {
+        
+        coins += c;
+        return coins;
+        
+    }
+
     
 
     
