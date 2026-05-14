@@ -3,7 +3,7 @@ public class Slots
     private String[][] slots = {{"", "", ""}, {"", "", ""}, {"", "", ""}};
     private String[] slotValue = {"🍒", "🍇", "🍋"}; //sorry jun, i gotta make this a single array so my brain doesn't explode
     Gamble Gambling = new Gamble();
-    
+
     public void Play()
     {
         int auto = 0;
@@ -55,36 +55,32 @@ public class Slots
         System.out.println(slots[1][0] + " " + slots[1][1] + " " + slots[1][2]);
         System.out.println(slots[2][0] + " " + slots[2][1] + " " + slots[2][2]);
 
-        if(slots[0][0].equals(slots[0][1]) && slots[0][1].equals(slots[0][2])) {
-            if(slots[0][0].equals("🍒") && slots[0][1].equals("🍒") && slots[0][2].equals("🍒")) {
-                System.out.println("ye won " + Gambling.addCoin(15) + " coins!");
+
+        for(int i = 0; i < 3; i++) {
+            if(slots[i][0].equals(slots[i][1]) && slots[i][1].equals(slots[i][2])) {
+                reward(slots[i][0]);
+            } else if(slots[0][i].equals(slots[1][i])&& slots[1][i].equals(slots[2][i])) {
+                reward(slots[0][i]);
             }
-            else if(slots[0][0].equals("🍇") && slots[0][1].equals("🍇") && slots[0][2].equals("🍇")){
-                                System.out.println("ye won" + Gambling.addCoin(25) + " coins!");
-            } else if(slots[0][0].equals("🍋") && slots[0][1].equals("🍋") && slots[0][2].equals("🍋")){
-                                System.out.println("ye won " + Gambling.addCoin(35) + " coins!");
-           
-        }
-    } else if(slots[1][0].equals(slots[1][1]) && slots[1][1].equals(slots[1][2])) {
-        if(slots[1][0].equals("🍒") && slots[1][1].equals("🍒") && slots[1][2].equals("🍒")) {
-            System.out.println("ye won " + Gambling.addCoin(15) + " coins!");
-        }
-        else if(slots[1][0].equals("🍇") && slots[1][1].equals("🍇") && slots[1][2].equals("🍇")){
-            System.out.println("ye won " + Gambling.addCoin(25) + " coins!");
-        } else if(slots[1][0].equals("🍋") && slots[1][1].equals("🍋") && slots[1][2].equals("🍋")){
-            System.out.println("ye won " + Gambling.addCoin(35) + " coins!");
-        }
-    } else if(slots[2][0].equals(slots[2][1]) && slots[2][1].equals(slots[2][2])) {
-        if(slots[2][0].equals("🍒") && slots[2][1].equals("🍒") && slots[2][2].equals("🍒")) {
-            System.out.println("ye won " + Gambling.addCoin(15) + " coins!");
-        }
-        else if(slots[2][0].equals("🍇") && slots[2][1].equals("🍇") && slots[2][2].equals("🍇")){
-            System.out.println("ye won " + Gambling.addCoin(25) + " coins!");
-        } else if(slots[2][0].equals("🍋") && slots[2][1].equals("🍋") && slots[2][2].equals("🍋")){
-            System.out.println("ye won " + Gambling.addCoin(35) + " coins!");
-        }
-    }
-    Main.coins = Gambling.addCoin(Main.coins);
+        } 
+
+        
+
+     
+       
     Gambling.options();
 }
-}
+
+   public void reward(String symbol) {
+            if(symbol.equals("🍒")) {
+                Gambling.addCoin(15);
+                System.out.println("ye won 15 coins baby!");
+            } else if(symbol.equals("🍇")) {
+                Gambling.addCoin(25);
+                System.out.println("ye won 25 coins baby!");
+            } else if(symbol.equals("🍋")) {
+                Gambling.addCoin(35);
+                System.out.println("ye won 35 coins baby!");
+        }
+    }
+    }
