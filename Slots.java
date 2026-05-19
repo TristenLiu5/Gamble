@@ -115,7 +115,6 @@ public class Slots
 
 
        
-    Gambling.options();
 }
 
    public void reward(String symbol) {
